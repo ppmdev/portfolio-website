@@ -1,0 +1,85 @@
+@import 'icons';
+
+#about {
+
+    color: $dark-color;
+    background: $light-color;
+    padding-bottom: 15vh;
+
+
+    .heading-container {
+        width: 100%;
+        margin-top: -11.5vh;
+
+        h1{
+            font-family: 'Mitr', sans-serif;
+            color: $light-color;
+            padding: 1.5rem;
+            text-align: right;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.5rem;
+            letter-spacing: 0.25rem;
+        }
+    }
+
+    #image-about {
+
+        padding-bottom: 0;
+
+        .portrait-image {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background: rgba(red, 0.5);
+            margin: 0 3rem 1rem 0;
+            float: left;
+        }
+
+        p {
+            line-height: 3rem;
+            width: 100%;
+        }        
+    }
+
+    #tech-about {
+
+        padding-top: 0;
+
+        .tech-list {
+            width: 100%;
+            margin: 0 auto;
+            height: 10rem;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            list-style-type: none;          
+
+            .tech-list-item {
+                width: 30%;
+                padding-top: 1rem;
+                text-align: left;
+                display: flex;
+
+                .tech-icon {
+                    width: 50%;
+                    text-align: center;
+                    font-size: 1.5rem;
+
+                    &#express-icon {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        h3 {
+            text-align: center;
+            padding-top: 5rem;
+            padding-bottom: 3rem;
+            font-weight: 400;
+        }
+
+    }
+}

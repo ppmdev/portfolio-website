@@ -1,0 +1,21 @@
+// Laptops
+
+@include mediaLg {
+    
+    #projects {
+        
+        #project-cards-flex {
+            flex-wrap: wrap;
+
+            .card {
+                width: 400px;
+
+                &.card-open {
+                    display: block;
+                    height: 100vh;
+
+                }
+            }
+        }
+    }
+}

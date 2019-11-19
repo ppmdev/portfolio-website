@@ -1,0 +1,87 @@
+#courses {
+
+    background: $light-color;    
+    color: $dark-color;
+
+    .heading-container {
+
+        width: 100%;
+        text-align: center;
+
+        h1{
+            font-family: 'Mitr', sans-serif;
+            display: inline-block;
+            font-size: 2rem;
+            letter-spacing: 0.75rem;
+            font-weight: 600;
+            padding-top: 2rem;
+
+            &:after{
+                content: '';
+                width: 6rem;
+                height: 0;
+                border-bottom: 2px solid $dark-color;
+                display: block;
+                margin: 0.5rem auto 0 auto;
+            }
+        }
+    }
+
+    #course-card-flex {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+
+        margin-top: 3rem;
+
+        .card-header {
+            padding: 1rem;
+            padding-bottom: 2rem;
+            background: $light-color;
+            color: #333;
+
+            p {
+                position: absolute;
+                bottom: 1rem;
+            }
+        }
+
+        .card-img {            
+            
+
+            &.react-img {
+                background: url(../images/react-course.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &.angular-img {
+                background: url(../images/angular-course.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &.javascript-img { 
+                background: url(../images/javascript-course.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+        .card-more {
+
+            height: 1.75rem;
+            width: 100%;
+            position: absolute;
+            bottom: -3rem;
+            text-align: center;
+            font-weight: 500;
+        }
+    }
+}

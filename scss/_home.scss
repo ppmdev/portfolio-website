@@ -1,0 +1,78 @@
+#home {
+
+    color: $light-color;
+    background: $dark-blue;
+    
+
+    .heading-container {
+        width: 100%;
+        text-align: center;
+
+        h1 {
+            font-family: 'Mitr', sans-serif;
+            display: block;
+            font-size: 5rem;
+            padding-top: 20vh;
+            font-weight: 400;
+        }
+
+        .sub-headings{
+
+            margin-top: 5vh;
+            display: block;
+            text-align: center;
+
+            h2 {
+
+                display: inline-block;
+                font-size: 2rem;
+                // text-shadow: 0.2rem 0.2rem 0.2rem rgba($dark-color, 0.7);
+                font-weight: 500;
+
+                &:nth-child(1){
+                    color: $blue;                    
+                }
+                &:nth-child(3){
+                    color: $orange;
+                    font-size: 1.5rem;
+                }
+            }
+
+            i{
+                display: inline-block;
+                text-shadow: 0 0 15px rgba($light-color, 0.5);
+                padding: 2rem;
+            }    
+        }
+    }
+
+    .action-btn {
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        margin-top: 15vh;
+        width: 80px;
+        height: 80px;
+        border-left: 2px solid rgba(#222, 0.6);
+        border-bottom: 2px solid rgba(#222, 0.6);        
+        box-shadow: -1.5px 3px 1.5px rgba(#111, 1), 8px 8px 4px rgba(#111, 0.3);
+        border-radius: 50%;
+        background: rgba(#222, 0.8);
+        line-height: 50px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.25rem;
+        color: rgba(#ccc, 0.9);
+        @include easeOut;
+
+        &:hover {
+            color: rgba($blue, 0.5);
+        }
+
+        i {
+            line-height: 80px;
+            font-size: 64px;
+            margin: 1px 0 0 -2px;
+        }
+    }
+}

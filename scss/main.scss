@@ -1,0 +1,239 @@
+@import 'config';
+@import 'home';
+@import 'about';
+@import 'projects';
+@import 'courses';
+@import 'contact';
+@import 'menu';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Mitr', sans-serif;
+}
+
+a {
+    color: $blue;
+}
+
+header {
+    
+    background: rgba(#111, 1);
+    width: 60px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 4;
+    @include easeOut;
+
+    &.nav-open{
+
+        width: 300px;
+        background: rgba(#111, 1);
+        border-right: 1.5px solid rgba($dark-color, 0.3); 
+
+    }
+}
+
+main{
+    width: calc(100vw - 60px);
+    margin-left: 60px;
+}
+
+footer {
+    height: 4rem;
+    width: 100%;
+    text-align: center;
+    background: #111;
+    color: $light-color;
+    position: absolute;
+    bottom: 0;
+}
+
+.content-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10vh 0;
+}
+
+.card {
+    border: 1px solid rgba($dark-color, 0.15);
+    width: 33.3333%;
+    background: $light-color;
+    color: $dark-color;
+    position: relative;
+    box-shadow: 0 2px 4px rgba($dark-color, 0.3);
+    margin: 1rem;
+
+    .card-img {
+
+        height: 200px;
+        width: 100%; 
+        overflow: hidden;
+
+    }
+
+    
+
+    .card-info {
+
+        width: 100%;
+
+        .card-header {
+            width: 100%;
+            color: $light-color;
+            text-align: center;
+            background: rgba(#111, 1);
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                padding: 0.5rem;
+            }
+
+        }
+
+        .card-text {
+            width: 100%;
+            line-height: 1.5rem;
+
+            p {
+                padding: 2rem;
+            }
+        }
+    }
+
+    .card-more {
+
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        font-weight: 700;
+        z-index: 3;
+        @include easeOut;
+
+        i {
+            font-size: 1.5rem;
+            color: $dark-color;
+            cursor: pointer;
+            @include easeOut;
+
+            &:hover{
+                color: $blue;
+                @include easeOut;
+            }
+        }
+    }
+
+    &.card-open {
+        
+        width: 66.66%;
+        height: 100vh;
+        transition: all 1s ease;
+
+        &:before {
+
+            background: transparent;            
+
+        }
+
+        .card-header {
+            background: $orange;
+        }
+
+        .card-img{
+            height: 0px;
+            visibility: hidden;
+            @include easeOut;
+
+            i{
+                opacity: 0;
+                @include easeOut;
+            }
+        }
+
+        .card-info {
+
+            .card-text {
+                overflow: scroll;
+                // padding-bottom: 80px;
+            }
+        }
+
+        .card-more {
+
+            i {
+                padding-bottom: 1rem;
+                font-size: 1rem;
+                color: #222;
+                @include easeOut;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+}
+
+.font-fancy {
+
+    font-family: 'Architects Daughter', cursive;
+
+}
+
+.font-code {
+    font-family: 'Roboto mono', monospace;
+}
+
+
+.section-full-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+
+}
+
+.triangle-right {
+
+    width: 0;
+    height: 0;
+    border-top: 10vh solid $orange;
+    border-left: 100vw solid transparent;
+    z-index: 3;
+    @include easeOut;
+
+}
+
+.triangle-left {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 10vh solid $orange;
+    border-right: 100vw solid transparent;
+    @include easeOut;
+
+}
+
+@import 'smartphone';
+@import 'tablet';
+@import 'laptop';
+@import 'desktop';

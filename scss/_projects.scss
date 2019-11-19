@@ -1,0 +1,217 @@
+#projects {
+
+    background: #ddd;
+
+    .card {
+        height: 400px;
+        overflow: hidden;
+
+        &:before {
+            content: '';
+            height: 5rem;
+            width: 100%;
+            background: linear-gradient(to top, rgba($light-color, 1), rgba($light-color, 0));
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        .card-img {
+
+            height: 200px;
+            width: 100%; 
+            text-align: center;
+            visibility: visible;
+            overflow: hidden;
+            @include easeOut;
+
+            &.portfolio-thumb {
+                background-image: url(../images/portfolio-thumb.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+            }
+
+            &.logo-thumb {
+                
+                background-image: url(../images/ppm-logo.png);
+                background-repeat: no-repeat;
+                background-size: 25%;
+                background-position: center;
+            }
+
+            i { 
+                line-height: 200px;
+                color: $red;
+                opacity: 1;
+                @include easeOut;
+            }
+        }
+
+        
+
+        .card-info {
+
+            width: 100%;
+
+            .card-header {
+                width: 100%;
+                padding: 0.25rem;
+                font-weight: 400; 
+                letter-spacing: 0.075rem;               
+                color: $light-color;
+                text-align: center;
+                background: rgba(#111, 0.9);
+                box-shadow: 0px 3px 6px rgba(#111, 0.3);
+
+            }
+
+            .card-text {
+                width: 100%;
+                overflow: hidden;
+                line-height: 1.5rem;
+
+                p {
+                    padding: 2rem;
+                }
+            }
+        }
+
+        .card-more {
+
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            font-weight: 700;
+            z-index: 3;
+            @include easeOut;
+
+            i {
+                font-size: 1.5rem;
+                color: $dark-color;
+                cursor: pointer;
+                @include easeOut;
+
+                &:hover{
+                    color: $blue;
+                    @include easeOut;
+                }
+            }
+        }
+
+        &.card-open {
+            
+            width: 66.66%;
+            height: 100vh;
+            transition: all 1s ease;
+
+            &:before {
+            
+
+            }
+
+            .card-header {
+                background: $orange;                
+            }
+
+            .card-img{
+                height: 0px;
+                visibility: hidden;
+                @include easeOut;
+
+                i{
+                    opacity: 0;
+                    @include easeOut;
+                }
+            }
+
+            .card-info {
+
+                .card-text {
+                    height: 90vh;
+                    overflow: scroll;
+                    padding-bottom: 1.5rem;
+                }
+            }
+
+            .card-more {
+
+                i {
+                    padding-top: 0.5rem;
+                    font-size: 1rem;
+                    color: #222;
+                    @include easeOut;
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+
+    .triangle-right {
+
+        width: 0;
+        height: 0;
+        border-top: 100px solid $dark-blue;
+        border-left: 100vw solid transparent;
+        @include easeOut;
+
+        &.nav-open {
+
+            border-top: 100px solid $dark-blue;
+            border-left: calc(100vw - 300px) solid transparent;
+            @include easeOut;
+
+        }
+
+    }
+
+    .triangle-left {
+
+        width: 0;
+        height: 0;
+        border-bottom: 100px solid $orange;
+        border-right: 100vw solid transparent;
+        position: absolute;
+        bottom: 0;
+        @include easeOut;
+
+    }
+
+
+
+    .heading-container {
+
+        width: 100%;
+        text-align: center;
+
+        h1{
+            font-family: 'Mitr', sans-serif;
+            color: #333;
+            display: inline-block;
+            font-size: 2rem;
+            letter-spacing: 0.75rem;
+            font-weight: 600;
+            padding: 2rem;
+
+            &:after{
+                content: '';
+                width: 6rem;
+                height: 0;
+                border-bottom: 2px solid #333;
+                display: block;
+                margin: 0.5rem auto 0 auto;
+            }
+        }
+    } 
+
+    #project-cards-flex {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+}

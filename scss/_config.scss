@@ -1,0 +1,49 @@
+$orange: #ff811b;
+$purple: #8a11fc;
+$blue: #19c6f1;
+$green: #3dff8e;
+$dark-blue: #193D52;
+$red: #e94e32; 
+$secondary-color: #2AAFC7;
+$dark-color: #2B2C2C;
+$light-color: #f3f3f3;
+$action-color: #0D8DF8;
+
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+// Media query mixins
+
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (min-width: 501px) and (max-width: 999px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 1000px) and (max-width: 1170px) {
+        @content;
+    }
+
+}
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}

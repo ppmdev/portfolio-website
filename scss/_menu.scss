@@ -1,0 +1,162 @@
+.menu {
+
+    text-align: center;
+
+    img {
+        width: 50px;
+        height: auto;
+        display: inline-block; 
+        padding: 0 0 0 0.5rem;
+        @include easeOut;
+
+        &.nav-open{
+            width: 100px;
+            padding-top: 3rem;
+            
+        }
+    }
+
+}
+
+.menu-btn {
+
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    @include easeOut;
+    text-align: center;
+    margin-top: 1.25rem;
+
+    &.btn-close{
+
+        transform: rotateY(360deg);
+        @include easeOut;
+
+    }
+
+    .btn-line {
+        display: block;
+        margin: 0 auto;
+        width: 34px;
+        height: 3px;
+        background: $light-color;
+        margin-top: 6px;
+        @include easeOut;
+
+        &.btn-close {
+
+            background: $light-color;
+            margin-top: 0;
+            width: 20px;
+            @include easeOut;
+
+            // Line 1 - Rotate
+
+            &:nth-child(1){
+                transform: translateY(3px) rotate(-135deg);
+            }
+
+            //Line 2 - Hide
+
+            &:nth-child(2){
+                opacity: 0;
+                transform: rotate(45deg);
+            }
+
+            // Line 3 - Rotate
+
+            &:nth-child(3){
+                transform: translateY(-3px) rotate(135deg);
+            }
+
+        }
+    }
+
+}
+
+.nav-items { 
+
+    margin-top: 3rem;
+    text-align: center;
+    list-style-type: none;
+    display: none;
+    transition-delay: 0.3s;
+    @include easeOut;
+
+    &.nav-open {
+
+        display: block;
+
+    }
+
+}
+
+.nav-item {
+
+    padding: 1.5rem 0;
+
+    
+
+    &.nav-open {
+
+        color: lighten($dark-color, 10);
+        @include easeOut;
+
+        &:hover{
+            cursor: pointer;
+            color: $light-color;
+            @include easeOut;
+        }
+
+    }
+
+}
+
+.social-icons {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style-type: none;
+    @include easeOut;
+
+    &.nav-open{
+        width: 100%;
+
+        .social-icon {
+            #github-icon {
+                color: white;
+            }
+        }
+    }
+
+    .social-icon {
+        display: inline-block;
+        width: 60px;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        @include easeOut;
+
+        i {
+            cursor: pointer;
+        }
+
+        #linkedin-icon {
+            color: #0078B1;
+        }
+
+        #github-icon {
+            color: $light-color;
+        }
+
+        #google-icon {
+            color: #DB4436;
+        }
+    }
+
+}
+
