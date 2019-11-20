@@ -105,18 +105,25 @@
   padding-bottom: 10vh; }
   #about .heading-container {
     width: 100%;
-    margin-top: -11.5vh; }
+    text-align: center; }
     #about .heading-container h1 {
       font-family: 'Mitr', sans-serif;
-      color: #f3f3f3;
-      padding: 1.5rem;
-      text-align: right;
+      color: #333;
+      display: inline-block;
       font-size: 2rem;
+      letter-spacing: 0.75rem;
       font-weight: 600;
-      line-height: 1.5rem;
-      letter-spacing: 0.25rem; }
+      padding: 2rem; }
+      #about .heading-container h1:after {
+        content: '';
+        width: 6rem;
+        height: 0;
+        border-bottom: 2px solid #333;
+        display: block;
+        margin: 0 auto;
+        margin-top: 0.5rem; }
   #about #image-about {
-    padding-top: 10vh;
+    padding-top: 5vh;
     padding-bottom: 4rem; }
     #about #image-about .portrait-image {
       height: 300px;
@@ -129,7 +136,7 @@
       line-height: 3rem;
       width: 100%; }
   #about #tech-about .tech-list {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     height: 10rem;
     display: flex;
@@ -154,7 +161,8 @@
     font-weight: 600; }
 
 #projects {
-  background: #ddd; }
+  background: #ddd;
+  padding-bottom: 5rem; }
   #projects .card {
     height: 400px;
     overflow: hidden; }
@@ -344,7 +352,9 @@
       font-weight: 500; }
 
 #contact {
-  height: 90vh; }
+  height: 50vh;
+  position: relative;
+  overflow: hidden; }
   #contact .bg-img {
     z-index: -1;
     width: 100vw;
@@ -376,24 +386,22 @@
   #contact .content-container {
     color: #f3f3f3;
     text-align: center;
-    padding-top: 4rem; }
-    #contact .content-container h1, #contact .content-container h2, #contact .content-container h3, #contact .content-container h4, #contact .content-container h5 {
+    padding-top: 5rem; }
+    #contact .content-container .contact-item {
       display: inline-block;
-      letter-spacing: 0.1rem; }
-    #contact .content-container i {
-      display: block;
-      margin: 0 auto;
-      margin-top: 5rem; }
-  #contact .contact-item-text {
-    font-size: 1.25rem;
-    letter-spacing: 0.1rem;
-    margin-top: 3rem;
-    display: block; }
-    #contact .contact-item-text a {
-      color: #f3f3f3;
-      text-decoration: none; }
-      #contact .contact-item-text a:hover {
-        color: #19c6f1; }
+      padding: 1.5rem 10vw; }
+      #contact .content-container .contact-item i {
+        display: inline-block;
+        padding-right: 1rem;
+        position: relative;
+        bottom: -0.4rem; }
+      #contact .content-container .contact-item .contact-item-text {
+        font-size: 1.25rem; }
+        #contact .content-container .contact-item .contact-item-text a {
+          color: #f3f3f3;
+          text-decoration: none; }
+          #contact .content-container .contact-item .contact-item-text a:hover {
+            text-decoration: underline; }
 
 .menu {
   text-align: center; }
@@ -405,7 +413,7 @@
     transition: all 0.5s ease-out; }
     .menu img.nav-open {
       width: 100px;
-      padding-top: 3rem; }
+      padding: 0; }
 
 .menu-btn {
   width: 60px;
@@ -439,7 +447,7 @@
         transform: translateY(-3px) rotate(135deg); }
 
 .nav-items {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   text-align: center;
   list-style-type: none;
   display: none;
@@ -451,7 +459,7 @@
 .nav-item {
   padding: 1.5rem 0; }
   .nav-item.nav-open {
-    color: #444646;
+    color: #5d6060;
     transition: all 0.5s ease-out; }
     .nav-item.nav-open:hover {
       cursor: pointer;
@@ -469,9 +477,8 @@
   list-style-type: none;
   transition: all 0.5s ease-out; }
   .social-icons.nav-open {
-    width: 100%; }
-    .social-icons.nav-open .social-icon #github-icon {
-      color: white; }
+    width: 100%;
+    bottom: 15vh; }
   .social-icons .social-icon {
     display: inline-block;
     width: 60px;
@@ -523,7 +530,7 @@ main {
   margin-left: 60px; }
 
 footer {
-  height: 4rem;
+  height: 1.5rem;
   width: 100%;
   text-align: center;
   background: #111;
@@ -653,56 +660,79 @@ footer {
   main {
     margin-left: 0;
     width: 100%; }
+  .menu .nav-items {
+    margin-top: 1.5rem;
+    text-align: center;
+    list-style-type: none;
+    display: block;
+    transition-delay: 0.3s;
+    transition: all 0.5s ease-out; }
+    .menu .nav-items.nav-open {
+      width: 100%; }
+    .menu .nav-items .nav-item {
+      padding: 1rem 0; }
+      .menu .nav-items .nav-item.nav-open {
+        color: #5d6060;
+        transition: all 0.5s ease-out; }
+        .menu .nav-items .nav-item.nav-open:hover {
+          cursor: pointer;
+          color: #f3f3f3;
+          transition: all 0.5s ease-out; }
   .menu-btn {
-    display: inline-block;
-    margin-top: 15px; }
-    .menu-btn.btn-close {
-      background: transparent; }
+    display: inline-block; }
   .social-icons {
     display: none; }
     .social-icons.nav-open {
       display: inline-block;
-      padding-bottom: 1.5rem; }
+      position: static;
+      padding-top: 3rem; }
   .section-full-page#home .heading-container {
     width: 80%;
     margin: 0 auto; }
     .section-full-page#home .heading-container h1 {
-      padding-top: 6rem;
+      padding-top: 5rem;
       display: block;
-      font-size: 3rem; }
+      font-size: 3.5rem; }
     .section-full-page#home .heading-container .sub-headings {
-      margin-top: 6rem; }
+      margin-top: 3rem; }
       .section-full-page#home .heading-container .sub-headings h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         display: block; }
         .section-full-page#home .heading-container .sub-headings h2:nth-child(3) {
-          font-size: 1.25rem; }
+          font-size: 1.5rem;
+          padding-top: 3rem; }
       .section-full-page#home .heading-container .sub-headings i {
-        display: inline-block;
-        padding: 1.5rem; }
-  .section-full-page#about .heading-container {
-    width: 100%;
-    margin-top: -11.5vh; }
-    .section-full-page#about .heading-container h1 {
-      padding: 1.5rem 0.75rem;
-      text-align: right;
-      font-size: 1.25rem;
-      line-height: 1.25rem;
-      letter-spacing: 0.1rem; }
+        display: none;
+        padding: 1rem; }
+  .section-full-page#home .action-btn {
+    margin-top: 5rem; }
+  .section-full-page#about .heading-container h1 {
+    padding: 1rem 0;
+    text-align: right;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem; }
   .section-full-page#about #image-about .portrait-image {
     float: none;
     margin: 0 auto;
-    margin-top: 3rem; }
+    margin-top: 1rem; }
   .section-full-page#about #image-about p {
-    padding: 3rem 2rem;
+    padding: 2rem 1rem;
     line-height: 3rem; }
+  .section-full-page#about #tech-about h3 {
+    padding: 0 0.75rem 3rem 0.75rem; }
+  .section-full-page#about #tech-about .tech-list {
+    height: auto; }
+    .section-full-page#about #tech-about .tech-list .tech-list-item {
+      width: 100%; }
   .section-full-page#projects .content-container {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap; }
     .section-full-page#projects .content-container .card {
-      width: 100%;
+      width: 90%;
+      max-width: 400px;
       margin: 2rem 0; }
       .section-full-page#projects .content-container .card.card-open {
         width: 100%;
@@ -712,10 +742,13 @@ footer {
         .section-full-page#projects .content-container .card.card-open .card-more {
           height: 2rem; }
           .section-full-page#projects .content-container .card.card-open .card-more i {
-            font-size: 1.25rem; }
+            font-size: 1.5rem;
+            position: relative;
+            bottom: 2rem; }
       .section-full-page#projects .content-container .card .card-more i {
         position: relative;
-        bottom: 0; }
+        bottom: 0;
+        font-size: 2rem; }
   .section-full-page#courses #course-card-flex {
     width: 100%;
     flex-wrap: wrap;
@@ -736,7 +769,7 @@ footer {
       letter-spacing: 0.1rem;
       padding-right: 0.5rem; } }
 
-@media screen and (min-width: 501px) and (max-width: 999px) {
+@media screen and (min-width: 501px) and (max-width: 1024px) {
   header {
     background: rgba(17, 17, 17, 0.9);
     width: 100%;
@@ -752,41 +785,58 @@ footer {
   main {
     margin-left: 0;
     width: 100%; }
-  footer {
-    width: 100vw;
-    height: calc(10vh + 60px);
-    margin: 0; }
   .menu-btn {
     display: inline-block;
     margin-top: 15px; }
     .menu-btn.btn-close {
       padding-top: 2rem;
       background: transparent; }
+  .menu #menu-img {
+    padding-top: 3vh; }
+  .menu .nav-item {
+    padding-bottom: 3vh; }
   .social-icons {
     display: none; }
     .social-icons.nav-open {
-      display: inline-block;
-      padding-bottom: 4rem; }
+      position: static;
+      width: auto;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      padding-top: 3rem;
+      transition: all 0.5s ease-out; }
   .section-full-page#home .heading-container h1 {
     padding-top: 25%; }
   .section-full-page#home .action-btn {
     margin: 10vh auto 0 auto; }
-  .section-full-page#about .content-container {
-    width: 90%;
-    margin: 0 auto; }
-    .section-full-page#about .content-container .portrait-image {
-      float: none;
+  .section-full-page#about .heading-container h1 {
+    padding: 1.5rem 0.75rem;
+    text-align: right;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem; }
+    .section-full-page#about .heading-container h1:after {
+      content: '';
+      width: 6rem;
+      height: 0;
+      border-bottom: 2px solid #333;
+      display: block;
       margin: 0 auto;
-      margin-top: 75px; }
-    .section-full-page#about .content-container p {
-      padding: 0 2rem;
-      line-height: 3.5rem; }
-    .section-full-page#about .content-container .tech-list {
-      text-align: center; }
-      .section-full-page#about .content-container .tech-list h4 {
-        display: inline-block; }
-      .section-full-page#about .content-container .tech-list ul {
-        margin-left: 2rem; }
+      margin-top: 0.5rem; }
+  .section-full-page#about #image-about .portrait-image {
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 2rem; }
+  .section-full-page#about #image-about p {
+    padding: 2rem 1rem;
+    line-height: 3rem; }
+  .section-full-page#about #tech-about h3 {
+    padding: 0 0.75rem 3rem 0.75rem; }
+  .section-full-page#about #tech-about .tech-list {
+    height: auto; }
+    .section-full-page#about #tech-about .tech-list .tech-list-item {
+      width: 100%; }
   .section-full-page#projects .content-container {
     width: 100%;
     display: flex;
@@ -805,7 +855,7 @@ footer {
       width: 90%;
       max-width: 400px; } }
 
-@media screen and (min-width: 1000px) and (max-width: 1170px) {
+@media screen and (min-width: 1025px) and (max-width: 1170px) {
   #projects #project-cards-flex {
     flex-wrap: wrap; }
     #projects #project-cards-flex .card {

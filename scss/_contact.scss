@@ -1,6 +1,8 @@
 #contact {
 
-    height: 90vh;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
 
     .bg-img{
         z-index: -1;
@@ -41,33 +43,32 @@
     .content-container {
         color: $light-color;
         text-align: center;
-        padding-top: 4rem;
+        padding-top: 5rem;
 
-        h1,h2,h3,h4,h5 {
+        .contact-item {
+
             display: inline-block;
-            letter-spacing: 0.1rem;
-        }
+            padding: 1.5rem 10vw;
 
-        i {
-            display: block;
-            margin: 0 auto;
-            margin-top: 5rem;
-        }
-    }
-
-    .contact-item-text{
-        font-size: 1.25rem;
-        letter-spacing: 0.1rem;
-        margin-top: 3rem;
-        display: block;
-
-        a {
-            color: $light-color;
-            text-decoration: none;
-
-            &:hover {
-                color: $blue;
+            i {
+                display: inline-block;
+                padding-right: 1rem;
+                position: relative;
+                bottom: -0.4rem;
             }
-        }
+
+            .contact-item-text{
+                font-size: 1.25rem;
+
+                a {
+                    color: $light-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        } 
     }
 }

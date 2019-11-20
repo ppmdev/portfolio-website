@@ -8,24 +8,34 @@
 
 
     .heading-container {
+
         width: 100%;
-        margin-top: -11.5vh;
+        text-align: center;
 
         h1{
             font-family: 'Mitr', sans-serif;
-            color: $light-color;
-            padding: 1.5rem;
-            text-align: right;
+            color: #333;
+            display: inline-block;
             font-size: 2rem;
+            letter-spacing: 0.75rem;
             font-weight: 600;
-            line-height: 1.5rem;
-            letter-spacing: 0.25rem;
+            padding: 2rem;
+
+            &:after{
+                content: '';
+                width: 6rem;
+                height: 0;
+                border-bottom: 2px solid #333;
+                display: block;
+                margin: 0 auto;
+                margin-top: 0.5rem;
+            }
         }
-    }
+    } 
 
     #image-about {
 
-        padding-top: 10vh;
+        padding-top: 5vh;
         padding-bottom: 4rem;
 
         .portrait-image {
@@ -46,7 +56,7 @@
     #tech-about {
 
         .tech-list {
-            width: 100%;
+            width: 90%;
             margin: 0 auto;
             height: 10rem;
             display: flex;

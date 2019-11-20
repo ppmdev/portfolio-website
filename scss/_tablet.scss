@@ -13,7 +13,7 @@
 
         &.nav-open{
             height: 100vh;
-            width: 100%;
+            width: 100%; 
 
         }
     }
@@ -21,12 +21,6 @@
     main {
         margin-left: 0;
         width: 100%;
-    }
-
-    footer {
-        width: 100vw;
-        height: calc(10vh + 60px);
-        margin: 0;
     }
 
     .menu-btn {
@@ -39,12 +33,34 @@
         }
     }
 
+    .menu {
+
+        #menu-img {
+            padding-top: 3vh;
+        }
+
+        .nav-items {
+
+        }
+
+        .nav-item {
+            padding-bottom: 3vh;
+        }
+
+    }
+
     .social-icons {
         display: none;
 
         &.nav-open{
-            display: inline-block;
-            padding-bottom: 4rem;
+            position: static;
+            width: auto;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            padding-top: 3rem;
+            @include easeOut;
         }
     }
 
@@ -65,31 +81,56 @@
         }
         &#about {
 
-            .content-container{
-                width: 90%;
-                margin: 0 auto;
+            .heading-container {
+                
+
+                h1{
+                    padding: 1.5rem 0.75rem;
+                    text-align: right;
+                    font-size: 2rem;
+                    line-height: 2rem;
+                    letter-spacing: 0.1rem;
+
+                    &:after{
+                        content: '';
+                        width: 6rem;
+                        height: 0;
+                        border-bottom: 2px solid #333;
+                        display: block;
+                        margin: 0 auto;
+                        margin-top: 0.5rem;
+                    }
+                }
+
+            }
+
+            #image-about {
 
                 .portrait-image {
                     float: none;
                     margin: 0 auto;
-                    margin-top: 75px;
+                    margin-bottom: 2rem;
                 }
 
                 p {
-                    padding: 0 2rem;
-                    line-height: 3.5rem;
+                    padding: 2rem 1rem;
+                    line-height: 3rem;
+                }
+            }
+
+            #tech-about {
+
+                h3 {
+                    padding: 0 0.75rem 3rem 0.75rem;
                 }
 
                 .tech-list {
-                    text-align: center;
-                    h4 {
-                        display: inline-block;
-                    }
-                    ul {
-                        margin-left: 2rem;
+                    height: auto;
+
+                    .tech-list-item {
+                        width: 100%;
                     }
                 }
-
             }
         }
         &#projects {

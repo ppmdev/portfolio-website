@@ -47,7 +47,6 @@ const toggleNav = function() {
         menuImg.classList.add('nav-open');
         menuBtn.classList.add('btn-close');  // Menu button animation class
         socialIcons.classList.add('nav-open'); 
-        githubIcon.style.color = '#2C2C2C';
         showNav = true;
 
     } else {
@@ -65,7 +64,6 @@ const toggleNav = function() {
         socialIcons.classList.remove('nav-open');
         // Menu button class manipulation
         menuBtn.classList.remove('btn-close');
-        githubIcon.style.color = '#E4EBED';
         showNav = false;
     }
 

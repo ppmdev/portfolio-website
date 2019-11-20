@@ -31,13 +31,13 @@ $action-color: #0D8DF8;
 }
 
 @mixin mediaMd {
-    @media screen and (min-width: 501px) and (max-width: 999px) {
+    @media screen and (min-width: 501px) and (max-width: 1024px) {
         @content;
     }
 }
 
 @mixin mediaLg {
-    @media screen and (min-width: 1000px) and (max-width: 1170px) {
+    @media screen and (min-width: 1025px) and (max-width: 1170px) {
         @content;
     }
 
