@@ -81,23 +81,24 @@
         &#home {
 
             .heading-container{
-                width: 80%;
+                width: 100%;
                 margin: 0 auto;
 
                 h1{
-                    padding-top: 5rem;
+                    padding-top: 3rem;
                     display: block;
-                    font-size: 3.5rem;
+                    font-size: 4rem;
                 }
 
                 .sub-headings {
-                    margin-top: 3rem;
+                    margin-top: 2rem;
+
                     h2 {
                         font-size: 2rem;
                         display: block;
 
                         &:nth-child(3) {
-                            font-size: 1.5rem;
+                            font-size: 1.3rem;
                             padding-top: 3rem;
                         }
                     }
@@ -211,23 +212,54 @@
                 }
             }
         }
+    }
+    
+    &#contact {
 
-        &#contact {
-            .heading-container {
-                width: 100%;
-                margin-top: -8vh;
+        .heading-container {
+            width: 100%;
+            margin-top: -8vh;
 
-                h1 {
-                    font-family: 'Mitr', sans-serif;
-                    color: $light-color;
-                    text-align: right;
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    line-height: 1.5rem;
-                    letter-spacing: 0.1rem;
-                    padding-right: 0.5rem;
-                }
+            h1 {
+                font-family: 'Mitr', sans-serif;
+                color: $light-color;
+                text-align: right;
+                font-size: 1.5rem;
+                font-weight: 600;
+                line-height: 1.5rem;
+                letter-spacing: 0.1rem;
+                padding-right: 0.5rem;
             }
         }
-    }       
+
+        .content-container {
+            color: $light-color;
+            text-align: center;
+            padding-top: 1rem;
+
+            .contact-item {
+
+                display: inline-block;
+                padding: 1rem 0;
+
+                i {
+                    display: inline-block;
+                    padding: 1rem;
+                }
+
+                .contact-item-text{
+                    font-size: 1.25rem;
+
+                    a {
+                        color: $light-color;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            } 
+        }
+    }
 }
