@@ -1,6 +1,5 @@
 #contact {
 
-    color: $dark-color;
     height: 90vh;
 
     .bg-img{
@@ -25,23 +24,24 @@
 
     .heading-container {
         width: 100%;
-        margin-top: -11.5vh;
+        margin-top: -8vh;
 
         h1 {
             font-family: 'Mitr', sans-serif;
             color: $light-color;
-            padding: 1.5rem;
             text-align: right;
             font-size: 2rem;
             font-weight: 600;
             line-height: 1.5rem;
             letter-spacing: 0.25rem;
+            padding-right: 0.5rem;
         }
     }
 
     .content-container {
         color: $light-color;
         text-align: center;
+        padding-top: 4rem;
 
         h1,h2,h3,h4,h5 {
             display: inline-block;

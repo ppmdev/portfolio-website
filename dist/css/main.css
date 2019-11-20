@@ -102,7 +102,7 @@
 #about {
   color: #2B2C2C;
   background: #f3f3f3;
-  padding-bottom: 15vh; }
+  padding-bottom: 10vh; }
   #about .heading-container {
     width: 100%;
     margin-top: -11.5vh; }
@@ -116,7 +116,8 @@
       line-height: 1.5rem;
       letter-spacing: 0.25rem; }
   #about #image-about {
-    padding-bottom: 0; }
+    padding-top: 10vh;
+    padding-bottom: 4rem; }
     #about #image-about .portrait-image {
       height: 300px;
       width: 300px;
@@ -127,33 +128,30 @@
     #about #image-about p {
       line-height: 3rem;
       width: 100%; }
-  #about #tech-about {
-    padding-top: 0; }
-    #about #tech-about .tech-list {
-      width: 100%;
-      margin: 0 auto;
-      height: 10rem;
+  #about #tech-about .tech-list {
+    width: 100%;
+    margin: 0 auto;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    list-style-type: none; }
+    #about #tech-about .tech-list .tech-list-item {
+      width: 30%;
+      text-align: left;
       display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: center;
-      list-style-type: none; }
-      #about #tech-about .tech-list .tech-list-item {
-        width: 30%;
-        padding-top: 1rem;
-        text-align: left;
-        display: flex; }
-        #about #tech-about .tech-list .tech-list-item .tech-icon {
-          width: 50%;
-          text-align: center;
-          font-size: 1.5rem; }
-          #about #tech-about .tech-list .tech-list-item .tech-icon#express-icon {
-            font-size: 1rem; }
-    #about #tech-about h3 {
-      text-align: center;
-      padding-top: 5rem;
-      padding-bottom: 3rem;
-      font-weight: 400; }
+      padding-bottom: 1.5rem; }
+      #about #tech-about .tech-list .tech-list-item .tech-icon {
+        width: 50%;
+        text-align: center;
+        font-size: 1.5rem; }
+        #about #tech-about .tech-list .tech-list-item .tech-icon#express-icon {
+          font-size: 1rem; }
+  #about #tech-about h3 {
+    text-align: center;
+    padding-bottom: 3rem;
+    font-weight: 600; }
 
 #projects {
   background: #ddd; }
@@ -346,7 +344,6 @@
       font-weight: 500; }
 
 #contact {
-  color: #2B2C2C;
   height: 90vh; }
   #contact .bg-img {
     z-index: -1;
@@ -366,19 +363,20 @@
       top: 0; }
   #contact .heading-container {
     width: 100%;
-    margin-top: -11.5vh; }
+    margin-top: -8vh; }
     #contact .heading-container h1 {
       font-family: 'Mitr', sans-serif;
       color: #f3f3f3;
-      padding: 1.5rem;
       text-align: right;
       font-size: 2rem;
       font-weight: 600;
       line-height: 1.5rem;
-      letter-spacing: 0.25rem; }
+      letter-spacing: 0.25rem;
+      padding-right: 0.5rem; }
   #contact .content-container {
     color: #f3f3f3;
-    text-align: center; }
+    text-align: center;
+    padding-top: 4rem; }
     #contact .content-container h1, #contact .content-container h2, #contact .content-container h3, #contact .content-container h4, #contact .content-container h5 {
       display: inline-block;
       letter-spacing: 0.1rem; }
@@ -535,8 +533,7 @@ footer {
 
 .content-container {
   width: 80%;
-  margin: 0 auto;
-  padding: 10vh 0; }
+  margin: 0 auto; }
 
 .card {
   border: 1px solid rgba(43, 44, 44, 0.15);
@@ -639,10 +636,12 @@ footer {
   transition: all 0.5s ease-out; }
 
 @media screen and (max-width: 500px) {
+  .content-container {
+    width: 100%; }
   header {
     background: rgba(17, 17, 17, 0.9);
     width: 100%;
-    height: 60px;
+    height: 10vh;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -668,38 +667,35 @@ footer {
     width: 80%;
     margin: 0 auto; }
     .section-full-page#home .heading-container h1 {
-      padding-top: 20vh;
+      padding-top: 6rem;
       display: block;
-      font-size: 4.5rem; }
+      font-size: 3rem; }
     .section-full-page#home .heading-container .sub-headings {
-      margin-top: 10vh; }
+      margin-top: 6rem; }
       .section-full-page#home .heading-container .sub-headings h2 {
-        font-size: 1.5rem; }
+        font-size: 1.5rem;
+        display: block; }
+        .section-full-page#home .heading-container .sub-headings h2:nth-child(3) {
+          font-size: 1.25rem; }
       .section-full-page#home .heading-container .sub-headings i {
         display: inline-block;
-        padding: 1rem; }
+        padding: 1.5rem; }
   .section-full-page#about .heading-container {
     width: 100%;
     margin-top: -11.5vh; }
     .section-full-page#about .heading-container h1 {
-      font-family: 'Mitr', sans-serif;
-      color: #f3f3f3;
       padding: 1.5rem 0.75rem;
       text-align: right;
-      font-size: 2rem;
-      font-weight: 600;
-      line-height: 1.5rem;
-      letter-spacing: 0.2rem; }
-  .section-full-page#about .content-container {
-    width: 100%;
-    margin: 0 auto; }
-    .section-full-page#about .content-container .portrait-image {
-      float: none;
-      margin: 0 auto;
-      margin-top: 100px; }
-    .section-full-page#about .content-container p {
-      padding: 100px 2rem;
-      line-height: 3rem; }
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+      letter-spacing: 0.1rem; }
+  .section-full-page#about #image-about .portrait-image {
+    float: none;
+    margin: 0 auto;
+    margin-top: 3rem; }
+  .section-full-page#about #image-about p {
+    padding: 3rem 2rem;
+    line-height: 3rem; }
   .section-full-page#projects .content-container {
     width: 100%;
     display: flex;
@@ -720,12 +716,25 @@ footer {
       .section-full-page#projects .content-container .card .card-more i {
         position: relative;
         bottom: 0; }
-  .section-full-page#courses .content-container {
+  .section-full-page#courses #course-card-flex {
+    width: 100%;
     flex-wrap: wrap;
     padding-bottom: 20vh; }
-    .section-full-page#courses .content-container .card {
+    .section-full-page#courses #course-card-flex .card {
       margin-top: 4rem;
-      width: 90%; } }
+      width: 100%; }
+  .section-full-page#contact .heading-container {
+    width: 100%;
+    margin-top: -8vh; }
+    .section-full-page#contact .heading-container h1 {
+      font-family: 'Mitr', sans-serif;
+      color: #f3f3f3;
+      text-align: right;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+      letter-spacing: 0.1rem;
+      padding-right: 0.5rem; } }
 
 @media screen and (min-width: 501px) and (max-width: 999px) {
   header {

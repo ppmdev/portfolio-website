@@ -4,7 +4,7 @@
 
     color: $dark-color;
     background: $light-color;
-    padding-bottom: 15vh;
+    padding-bottom: 10vh;
 
 
     .heading-container {
@@ -25,7 +25,8 @@
 
     #image-about {
 
-        padding-bottom: 0;
+        padding-top: 10vh;
+        padding-bottom: 4rem;
 
         .portrait-image {
             height: 300px;
@@ -44,8 +45,6 @@
 
     #tech-about {
 
-        padding-top: 0;
-
         .tech-list {
             width: 100%;
             margin: 0 auto;
@@ -58,9 +57,9 @@
 
             .tech-list-item {
                 width: 30%;
-                padding-top: 1rem;
                 text-align: left;
                 display: flex;
+                padding-bottom: 1.5rem;
 
                 .tech-icon {
                     width: 50%;
@@ -76,9 +75,8 @@
 
         h3 {
             text-align: center;
-            padding-top: 5rem;
             padding-bottom: 3rem;
-            font-weight: 400;
+            font-weight: 600;
         }
 
     }
