@@ -80,35 +80,15 @@
 
         &#home {
 
-            .heading-container{
-                width: 100%;
+            .content-container{
                 margin: 0 auto;
 
-                h1{
-                    padding-top: 3rem;
+                #home-name{
                     display: block;
-                    font-size: 4rem;
-                }
-
-                .sub-headings {
-                    margin-top: 2rem;
-
-                    h2 {
-                        font-size: 2rem;
-                        display: block;
-
-                        &:nth-child(3) {
-                            font-size: 1.3rem;
-                            padding-top: 3rem;
-                        }
-                    }
-
-                    i {
-                        display: none;
-                        padding: 1rem;
-                    }
+                    font-size: 3.5rem;
                 }
             }
+            
             .action-btn {
                 margin-top: 5rem;
             }
@@ -176,7 +156,7 @@
                         width: 100%;
                         height: 90vh;
 
-                        .card-text {
+                        .card-content {
                             padding-bottom: 6rem;
                         }
 

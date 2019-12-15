@@ -1,56 +1,84 @@
 #home {
   color: #f3f3f3;
-  background: #193D52; }
-  #home .heading-container {
+  background: #111; }
+  #home .content-container {
     width: 100%;
     text-align: center; }
-    #home .heading-container h1 {
+    #home .content-container .logo-container {
+      padding: 10vh 0; }
+      #home .content-container .logo-container #logo {
+        animation: color-fill 2s ease forwards 3s; }
+      #home .content-container .logo-container #logo path:nth-child(1) {
+        stroke-dasharray: 555;
+        stroke-dashoffset: 555;
+        animation: draw-line 2s ease forwards 1s; }
+      #home .content-container .logo-container #logo path:nth-child(2) {
+        stroke-dasharray: 335;
+        stroke-dashoffset: 335;
+        animation: draw-line 6s ease forwards 1s; }
+      #home .content-container .logo-container #logo path:nth-child(3) {
+        stroke-dasharray: 308;
+        stroke-dashoffset: 308;
+        animation: draw-line 2s ease forwards 1.25s; }
+      #home .content-container .logo-container #logo path:nth-child(4) {
+        stroke-dasharray: 23;
+        stroke-dashoffset: 23;
+        animation: draw-line 2s ease forwards 1.75s; }
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes color-fill {
+  from {
+    fill: transparent;
+    stroke-width: 2px; }
+  to {
+    fill: #f3f3f3;
+    stroke-width: 0px; } }
+    #home .content-container #home-name {
       font-family: 'Mitr', sans-serif;
       display: block;
-      font-size: 5rem;
-      padding-top: 20vh;
+      font-size: 4rem;
       font-weight: 400; }
-    #home .heading-container .sub-headings {
-      margin-top: 5vh;
-      display: block;
-      text-align: center; }
-      #home .heading-container .sub-headings h2 {
-        display: inline-block;
-        font-size: 2rem;
-        font-weight: 500; }
-        #home .heading-container .sub-headings h2:nth-child(1) {
+      #home .content-container #home-name:after {
+        content: '';
+        width: 15rem;
+        height: 0;
+        border-bottom: 2px solid #f3f3f3;
+        display: block;
+        margin: 0 auto; }
+    #home .content-container .sub-headings {
+      padding-top: 2rem; }
+      #home .content-container .sub-headings h2 {
+        display: inline-block; }
+        #home .content-container .sub-headings h2:nth-of-type(1) {
+          font-family: 'Architects Daughter', cursive;
           color: #19c6f1; }
-        #home .heading-container .sub-headings h2:nth-child(3) {
-          color: #ff811b;
-          font-size: 1.5rem; }
-      #home .heading-container .sub-headings i {
-        display: inline-block;
-        text-shadow: 0 0 15px rgba(243, 243, 243, 0.5);
-        padding: 2rem; }
+        #home .content-container .sub-headings h2:nth-of-type(2) {
+          font-family: 'Roboto mono', monospace;
+          font-size: 1.2rem;
+          color: #3dff8e; }
+      #home .content-container .sub-headings #home-plus {
+        padding: 0 2rem; }
   #home .action-btn {
     cursor: pointer;
+    background: #f3f3f3;
+    color: #111;
+    border: 1.5px double #f3f3f3;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem 0.75rem 1.5rem;
     display: block;
     margin: 0 auto;
-    margin-top: 15vh;
-    width: 80px;
-    height: 80px;
-    border-left: 2px solid rgba(34, 34, 34, 0.6);
-    border-bottom: 2px solid rgba(34, 34, 34, 0.6);
-    box-shadow: -1.5px 3px 1.5px #111111, 8px 8px 4px rgba(17, 17, 17, 0.3);
-    border-radius: 50%;
-    background: rgba(34, 34, 34, 0.8);
-    line-height: 50px;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.25rem;
-    color: rgba(204, 204, 204, 0.9);
+    margin-top: 6rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
     transition: all 0.5s ease-out; }
     #home .action-btn:hover {
-      color: rgba(25, 198, 241, 0.5); }
-    #home .action-btn i {
-      line-height: 80px;
-      font-size: 64px;
-      margin: 1px 0 0 -2px; }
+      background: transparent;
+      color: #f3f3f3; }
+    #home .action-btn:focus {
+      outline: none; }
 
 #html-icon {
   color: #DE4B24; }
@@ -130,8 +158,8 @@
       width: 300px;
       border-radius: 50%;
       background: rgba(255, 0, 0, 0.5);
-      margin: 0 3rem 1rem 0;
-      float: left; }
+      margin: 0 0 1rem 3rem;
+      float: right; }
     #about #image-about p {
       line-height: 3rem;
       width: 100%; }
@@ -175,11 +203,8 @@
       bottom: 0;
       z-index: 2; }
     #projects .card .card-img {
-      height: 200px;
-      width: 100%;
       text-align: center;
       visibility: visible;
-      overflow: hidden;
       transition: all 0.5s ease-out; }
       #projects .card .card-img.portfolio-thumb {
         background-image: url(../images/portfolio-thumb.png);
@@ -196,43 +221,37 @@
         color: #e94e32;
         opacity: 1;
         transition: all 0.5s ease-out; }
-    #projects .card .card-info {
-      width: 100%; }
-      #projects .card .card-info .card-header {
-        width: 100%;
-        padding: 0.25rem;
-        font-weight: 400;
-        letter-spacing: 0.075rem;
-        color: #f3f3f3;
-        text-align: center;
-        background: rgba(17, 17, 17, 0.9);
-        box-shadow: 0px 3px 6px rgba(17, 17, 17, 0.3); }
-      #projects .card .card-info .card-text {
-        width: 100%;
-        overflow: hidden;
-        line-height: 1.5rem; }
-        #projects .card .card-info .card-text p {
-          padding: 2rem; }
-    #projects .card .card-more {
+    #projects .card .card-info .card-header {
+      padding: 0.25rem;
+      font-weight: 400;
+      letter-spacing: 0.075rem;
+      text-align: center;
+      box-shadow: 0px 3px 6px rgba(17, 17, 17, 0.3);
+      color: #f3f3f3;
+      background: #111111; }
+      #projects .card .card-info .card-header h2 {
+        font-size: 1.25rem; }
+    #projects .card .card-info .card-content {
       width: 100%;
+      overflow: hidden;
+      line-height: 1.5rem; }
+      #projects .card .card-info .card-content p {
+        padding: 2rem;
+        line-height: 2rem; }
+    #projects .card .card-more {
       position: absolute;
       bottom: 0;
-      text-align: center;
       font-weight: 700;
-      z-index: 3;
       transition: all 0.5s ease-out; }
       #projects .card .card-more i {
+        padding-bottom: 1rem;
         font-size: 1.5rem;
-        color: #2B2C2C;
-        cursor: pointer;
-        transition: all 0.5s ease-out; }
-        #projects .card .card-more i:hover {
-          color: #19c6f1;
-          transition: all 0.5s ease-out; }
+        color: #2B2C2C; }
     #projects .card.card-open {
-      width: 66.66%;
       height: 100vh;
       transition: all 1s ease; }
+      #projects .card.card-open:before {
+        background: transparent; }
       #projects .card.card-open .card-header {
         background: #ff811b; }
       #projects .card.card-open .card-img {
@@ -242,12 +261,15 @@
         #projects .card.card-open .card-img i {
           opacity: 0;
           transition: all 0.5s ease-out; }
-      #projects .card.card-open .card-info .card-text {
+      #projects .card.card-open .card-info .card-content {
         height: 90vh;
         overflow: scroll;
         padding-bottom: 1.5rem; }
+      #projects .card.card-open .card-info p {
+        overflow: scroll;
+        padding-bottom: 2rem; }
       #projects .card.card-open .card-more i {
-        padding-top: 0.5rem;
+        padding-top: 1rem;
         font-size: 1rem;
         color: #222;
         transition: all 0.5s ease-out; }
@@ -345,10 +367,8 @@
       background-position: center; }
     #courses .card .card-more {
       height: 1.75rem;
-      width: 100%;
       position: absolute;
       bottom: -3rem;
-      text-align: center;
       font-weight: 500; }
 
 #contact {
@@ -510,6 +530,9 @@ h1, h2, h3, h4, h5 {
 a {
   color: #19c6f1; }
 
+abbr {
+  text-decoration: none; }
+
 header {
   background: #111111;
   width: 60px;
@@ -557,67 +580,23 @@ footer {
   .card .card-info {
     width: 100%; }
     .card .card-info .card-header {
-      width: 100%;
-      color: #f3f3f3;
-      text-align: center;
-      background: #111111; }
-      .card .card-info .card-header h1,
+      width: 100%; }
       .card .card-info .card-header h2,
       .card .card-info .card-header h3,
       .card .card-info .card-header h4,
       .card .card-info .card-header h5 {
         padding: 0.5rem; }
-    .card .card-info .card-text {
-      width: 100%;
-      line-height: 1.5rem; }
-      .card .card-info .card-text p {
-        padding: 2rem; }
   .card .card-more {
     width: 100%;
-    position: absolute;
-    bottom: 0;
     text-align: center;
-    font-weight: 700;
     z-index: 3;
     transition: all 0.5s ease-out; }
     .card .card-more i {
-      font-size: 1.5rem;
-      color: #2B2C2C;
       cursor: pointer;
       transition: all 0.5s ease-out; }
       .card .card-more i:hover {
         color: #19c6f1;
         transition: all 0.5s ease-out; }
-  .card.card-open {
-    width: 66.66%;
-    height: 100vh;
-    transition: all 1s ease; }
-    .card.card-open:before {
-      background: transparent; }
-    .card.card-open .card-header {
-      background: #ff811b; }
-    .card.card-open .card-img {
-      height: 0px;
-      visibility: hidden;
-      transition: all 0.5s ease-out; }
-      .card.card-open .card-img i {
-        opacity: 0;
-        transition: all 0.5s ease-out; }
-    .card.card-open .card-info .card-text {
-      overflow: scroll; }
-    .card.card-open .card-more i {
-      padding-bottom: 1rem;
-      font-size: 1rem;
-      color: #222;
-      transition: all 0.5s ease-out; }
-      .card.card-open .card-more i:hover {
-        color: #e94e32; }
-
-.font-fancy {
-  font-family: 'Architects Daughter', cursive; }
-
-.font-code {
-  font-family: 'Roboto mono', monospace; }
 
 .section-full-page {
   position: relative;
@@ -686,24 +665,11 @@ footer {
       display: inline-block;
       position: static;
       padding-top: 3rem; }
-  .section-full-page#home .heading-container {
-    width: 100%;
+  .section-full-page#home .content-container {
     margin: 0 auto; }
-    .section-full-page#home .heading-container h1 {
-      padding-top: 3rem;
+    .section-full-page#home .content-container #home-name {
       display: block;
-      font-size: 4rem; }
-    .section-full-page#home .heading-container .sub-headings {
-      margin-top: 2rem; }
-      .section-full-page#home .heading-container .sub-headings h2 {
-        font-size: 2rem;
-        display: block; }
-        .section-full-page#home .heading-container .sub-headings h2:nth-child(3) {
-          font-size: 1.3rem;
-          padding-top: 3rem; }
-      .section-full-page#home .heading-container .sub-headings i {
-        display: none;
-        padding: 1rem; }
+      font-size: 3.5rem; }
   .section-full-page#home .action-btn {
     margin-top: 5rem; }
   .section-full-page#about .heading-container h1 {
@@ -739,7 +705,7 @@ footer {
       .section-full-page#projects .content-container .card.card-open {
         width: 100%;
         height: 90vh; }
-        .section-full-page#projects .content-container .card.card-open .card-text {
+        .section-full-page#projects .content-container .card.card-open .card-content {
           padding-bottom: 6rem; }
         .section-full-page#projects .content-container .card.card-open .card-more {
           height: 2rem; }
@@ -825,10 +791,6 @@ footer {
       flex-wrap: nowrap;
       padding-top: 3rem;
       transition: all 0.5s ease-out; }
-  .section-full-page#home .heading-container h1 {
-    padding-top: 25%; }
-  .section-full-page#home .action-btn {
-    margin: 10vh auto 0 auto; }
   .section-full-page#about .heading-container h1 {
     padding: 1.5rem 0.75rem;
     text-align: right;
@@ -880,9 +842,4 @@ footer {
     #projects #project-cards-flex .card {
       width: 400px; }
       #projects #project-cards-flex .card.card-open {
-        display: block;
         height: 100vh; } }
-
-@media screen and (min-width: 1171px) {
-  .section-full-page {
-    width: 100%; } }

@@ -5,7 +5,6 @@ const header = document.querySelector('header');
 const menuBtn = document.querySelector('.menu-btn');
 const menuTitle = document.querySelector('.menu-titles');
 const menu = document.querySelector('.menu');
-const menuImg = document.querySelector('#menu-img');
 const navItems = document.querySelector('.nav-items');
 const navItem = document.querySelectorAll('.nav-item');
 const menuBtnLines = document.querySelectorAll('.btn-line');
@@ -23,7 +22,7 @@ const contact = document.querySelector('#contact');
 const moreBtn = document.querySelectorAll('.card-more');
 
 // Action button selector
-const actionButtons = document.querySelectorAll('.action-btn');
+const actionButton = document.querySelector('.action-btn');
 
 // Set initial navbar state
 
@@ -44,7 +43,6 @@ const toggleNav = function() {
         main.classList.add('nav-open');
         
         navItems.classList.add('nav-open');
-        menuImg.classList.add('nav-open');
         menuBtn.classList.add('btn-close');  // Menu button animation class
         socialIcons.classList.add('nav-open'); 
         showNav = true;
@@ -60,7 +58,6 @@ const toggleNav = function() {
         header.classList.remove('nav-open');
         main.classList.remove('nav-open');
         navItems.classList.remove('nav-open');
-        menuImg.classList.remove('nav-open');
         socialIcons.classList.remove('nav-open');
         // Menu button class manipulation
         menuBtn.classList.remove('btn-close');
@@ -80,6 +77,8 @@ const FocusOut = function(e) {
 // Page scrolling function - Smooth behaviour not supported in safari or on IOS. Instant scroll will instead be the fallback behaviour.
 
 const smoothScroll = function(e, element) {
+    
+    // Smooth scroll functionality for opening of project cards, the element passed in is the card that was clicked.
 
     if(element){
         element.scrollIntoView({behaviour: "smooth"});
@@ -188,9 +187,7 @@ moreBtn.forEach(function(button){
     button.addEventListener('click', toggleCard);
 });
 
-// Action Buttons
+// Action Button
 
-actionButtons.forEach(function(button){
-    button.addEventListener('click', smoothScroll);
-})
+actionButton.addEventListener('click', smoothScroll);
 

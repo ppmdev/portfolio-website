@@ -19,11 +19,8 @@
 
         .card-img {
 
-            height: 200px;
-            width: 100%; 
             text-align: center;
             visibility: visible;
-            overflow: hidden;
             @include easeOut;
 
             &.portfolio-thumb {
@@ -53,63 +50,55 @@
 
         .card-info {
 
-            width: 100%;
-
             .card-header {
-                width: 100%;
                 padding: 0.25rem;
                 font-weight: 400; 
                 letter-spacing: 0.075rem;               
-                color: $light-color;
                 text-align: center;
-                background: rgba(#111, 0.9);
                 box-shadow: 0px 3px 6px rgba(#111, 0.3);
+                color: $light-color;
+                background: rgba(#111, 1);
+
+                h2 {
+                    font-size: 1.25rem;
+                }
 
             }
 
-            .card-text {
+            .card-content {
                 width: 100%;
                 overflow: hidden;
                 line-height: 1.5rem;
 
                 p {
                     padding: 2rem;
+                    line-height: 2rem;
                 }
             }
         }
 
         .card-more {
 
-            width: 100%;
             position: absolute;
             bottom: 0;
-            text-align: center;
             font-weight: 700;
-            z-index: 3;
             @include easeOut;
 
             i {
+                padding-bottom: 1rem;
                 font-size: 1.5rem;
                 color: $dark-color;
-                cursor: pointer;
-                @include easeOut;
-
-                &:hover{
-                    color: $blue;
-                    @include easeOut;
-                }
             }
         }
 
         &.card-open {
             
-            width: 66.66%;
             height: 100vh;
             transition: all 1s ease;
 
             &:before {
             
-
+                background: transparent;
             }
 
             .card-header {
@@ -129,17 +118,21 @@
 
             .card-info {
 
-                .card-text {
+                .card-content {
                     height: 90vh;
                     overflow: scroll;
                     padding-bottom: 1.5rem;
+                }
+                p {
+                    overflow: scroll;
+                    padding-bottom: 2rem;
                 }
             }
 
             .card-more {
 
                 i {
-                    padding-top: 0.5rem;
+                    padding-top: 1rem;
                     font-size: 1rem;
                     color: #222;
                     @include easeOut;

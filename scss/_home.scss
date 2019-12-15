@@ -1,78 +1,120 @@
 #home {
 
     color: $light-color;
-    background: $dark-blue;
+    background: #111;
     
 
-    .heading-container {
+    .content-container {
         width: 100%;
         text-align: center;
 
-        h1 {
-            font-family: 'Mitr', sans-serif;
-            display: block;
-            font-size: 5rem;
-            padding-top: 20vh;
-            font-weight: 400;
-        }
+        .logo-container {
+            padding: 10vh 0;
 
-        .sub-headings{
+            #logo {
+                animation: color-fill 2s ease forwards 3s;
+            }
 
-            margin-top: 5vh;
-            display: block;
-            text-align: center;
+            #logo path:nth-child(1){
+                stroke-dasharray: 555;
+                stroke-dashoffset: 555;
+                animation: draw-line 2s ease forwards 1s;
+            }
+            
+            #logo path:nth-child(2){
+                stroke-dasharray: 335;
+                stroke-dashoffset: 335;
+                animation: draw-line 6s ease forwards 1s;
+            }
+            
+            #logo path:nth-child(3){
+                stroke-dasharray: 308;
+                stroke-dashoffset: 308;
+                animation: draw-line 2s ease forwards 1.25s;
+            }
+            
+            #logo path:nth-child(4){
+                stroke-dasharray: 23;
+                stroke-dashoffset: 23;
+                animation: draw-line 2s ease forwards 1.75s;
+            }
 
-            h2 {
-
-                display: inline-block;
-                font-size: 2rem;
-                // text-shadow: 0.2rem 0.2rem 0.2rem rgba($dark-color, 0.7);
-                font-weight: 500;
-
-                &:nth-child(1){
-                    color: $blue;                    
-                }
-                &:nth-child(3){
-                    color: $orange;
-                    font-size: 1.5rem;
+            @keyframes draw-line {
+                to{
+                    stroke-dashoffset: 0;
                 }
             }
 
-            i{
+            @keyframes color-fill {
+                from{
+                    fill: transparent;
+                    stroke-width: 2px;
+                }
+                to {
+                    fill: #f3f3f3;
+                    stroke-width: 0px;
+                }
+            }
+        }
+
+        #home-name {
+            font-family: 'Mitr', sans-serif;
+            display: block;
+            font-size: 4rem;
+            font-weight: 400;
+
+            &:after{
+                content: '';
+                width: 15rem;
+                height: 0;
+                border-bottom: 2px solid #f3f3f3;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .sub-headings {
+            padding-top: 2rem;
+            h2{
                 display: inline-block;
-                text-shadow: 0 0 15px rgba($light-color, 0.5);
-                padding: 2rem;
-            }    
+
+                &:nth-of-type(1){
+                   font-family: 'Architects Daughter', cursive; 
+                   color: $blue;
+                }
+                &:nth-of-type(2){
+                    font-family: 'Roboto mono', monospace;
+                    font-size: 1.2rem;
+                    color: $green;
+                }
+            }
+            #home-plus{
+                padding: 0 2rem;
+            }
         }
     }
 
     .action-btn {
         cursor: pointer;
+        background: rgba($light-color, 1);
+        color: #111;
+        border: 1.5px double $light-color;
+        border-radius: 5px;
+        padding: 0.5rem 1.5rem 0.75rem 1.5rem;
         display: block;
         margin: 0 auto;
-        margin-top: 15vh;
-        width: 80px;
-        height: 80px;
-        border-left: 2px solid rgba(#222, 0.6);
-        border-bottom: 2px solid rgba(#222, 0.6);        
-        box-shadow: -1.5px 3px 1.5px rgba(#111, 1), 8px 8px 4px rgba(#111, 0.3);
-        border-radius: 50%;
-        background: rgba(#222, 0.8);
-        line-height: 50px;
-        text-align: center;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 1.25rem;
-        color: rgba(#ccc, 0.9);
+        margin-top: 6rem;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+
         @include easeOut;
 
-        &:hover {
-            color: rgba($blue, 0.5);
+        &:hover{
+            background: transparent;
+            color: $light-color;
         }
-
-        i {
-            line-height: 80px;
-            font-size: 64px;
-            margin: 1px 0 0 -2px;
+        &:focus{
+            outline: none;
         }
     }
 }

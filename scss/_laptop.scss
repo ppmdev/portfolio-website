@@ -1,4 +1,4 @@
-// Laptops
+// Small Laptops
 
 @include mediaLg {
     
@@ -11,9 +11,7 @@
                 width: 400px;
 
                 &.card-open {
-                    display: block;
                     height: 100vh;
-
                 }
             }
         }
